@@ -3,12 +3,11 @@ import { useWeb3React } from '@web3-react/core';
 import { InjectedConnector } from '@web3-react/injected-connector';
 
 const injected = new InjectedConnector({
-    supportedChainIds: [1, 3, 4, 5, 42],
+    supportedChainIds: [1, 3, 4, 5, 42, 11155111], // 添加您需要支持的链 ID
 });
-
 function Header() {
     const { active, account, activate, deactivate } = useWeb3React();
-
+    alert(active);
     async function connect() {
         try {
             await activate(injected);

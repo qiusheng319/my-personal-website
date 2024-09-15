@@ -4,6 +4,7 @@ import CreatePost from '../components/CreatePost';
 import Feed from '../components/Feed';
 
 function Home() {
+    // console.log("123");
     const { active, account } = useWeb3();
     const [posts, setPosts] = useState([]);
 
